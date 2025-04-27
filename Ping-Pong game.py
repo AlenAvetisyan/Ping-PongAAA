@@ -50,8 +50,8 @@ platform2 = Player2('platform2.png', 765, 232, 30, 135, 7, 0)
 ball = GameSprite('ball.png', 370, 10, 60, 60, speed_x, speed_y)
 
 font = font.Font(None, 70)
-lose1 = font.render('PLAYER 1 LOSE!', True, (180, 0, 0))
-lose2 = font.render('PLAYER 2 LOSE!', True, (180, 0, 0))
+lose1 = font.render('Tralalero Tralala LOSE!', True, (180, 0, 0))
+lose2 = font.render('Bombordiro Crocodilo LOSE!', True, (180, 0, 0))
 
 while game != False:
     for e in event.get():
@@ -65,10 +65,10 @@ while game != False:
     ball.rect.y += speed_y    
     
     if ball.rect.x <= 0:
-        window.blit(lose1, (220, 260))
+        window.blit(lose1, (100, 260))
         game = False    
     if ball.rect.x >= 800:
-        window.blit(lose2, (220, 260))
+        window.blit(lose2, (100, 260))
         game = False      
 
     platform1.reset()
